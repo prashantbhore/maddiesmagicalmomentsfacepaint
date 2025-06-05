@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$pill-padding: 0.25rem 0.875rem;
+$pill-radius: 0.75rem;
+
+.card {
+    padding: 3rem;
+    border-radius: 1rem;
+    background-color: rgba(72, 68, 69, 0.1);
+}
+
+.light-pill {
+    color: rgb(72, 68, 69);
+    background-color: rgba(72, 68, 69, 0.1);
+    width: max-content;
+    padding: $pill-padding;
+    border-radius: $pill-radius;
+}
+
+.para-1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: rgb(17, 24, 39);
+}
+
+.btn-main {
+    padding: .75rem 1.5rem;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: none;
+    font-weight: 500;
+    background-color: rgb(72, 68, 69);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border-color: rgb(72, 68, 69);
+    font-size: 20px;
+    line-height: 1.75rem;
+
+    &:hover {
+        color: rgb(255, 255, 255);
+        opacity: .9;
+        --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+}
