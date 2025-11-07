@@ -1,13 +1,42 @@
+/* Global and Imports */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-1 {
+  font-family: 'Fredoka One', cursive;
+  color: #474344;
+}
+
+/* Base Styles */
 .card {
   padding: 3rem;
   border-radius: 1rem;
   background-color: rgba(72, 68, 69, 0.1);
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .light-pill {
@@ -18,10 +47,25 @@
   border-radius: 0.75rem;
 }
 
+.light-pill-pink {
+  color: rgb(247, 175, 197);
+  background-color: rgba(247, 175, 197, 0.1);
+  width: max-content;
+  padding: 0.25rem 0.875rem;
+  border-radius: 0.75rem;
+}
+
 .para-1 {
   font-size: 24px;
   font-weight: 500;
   color: rgb(17, 24, 39);
+}
+
+.df-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-main {
@@ -36,7 +80,10 @@
   border-color: rgb(72, 68, 69);
   font-size: 20px;
   line-height: 1.75rem;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  /* Added transition */
 }
+
 .btn-main:hover {
   color: rgb(255, 255, 255);
   opacity: 0.9;
@@ -44,4 +91,316 @@
   box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
 }
 
-/*# sourceMappingURL=style.css.map */
+/* Section-Specific Styles */
+
+/* --- Navbar Styles --- */
+.navbar {
+  /* Add transitions for smooth scroll effect */
+  /* MODIFIED: Added 'transform' to the transition */
+  transition: padding 0.3s ease, background-color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+/* UPDATED: Added navbar-logo class */
+.navbar-logo {
+  max-height: 120px;
+  /* Default logo size */
+  transition: max-height 0.3s ease;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+/* Styles for when navbar is scrolled */
+.navbar-scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #ffffff;
+  /* Give it a solid background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Add a subtle shadow */
+}
+
+.navbar-scrolled .navbar-logo {
+  max-height: 80px;
+  /* Smaller logo on scroll */
+}
+
+/* --- NEW: Animated Hamburger Icon --- */
+.hamburger-icon {
+  width: 30px;
+  height: 22px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animate to "X" when 'collapsed' class is NOT present (i.e., menu is open) */
+.navbar-toggler:not(.collapsed) .hamburger-icon span:nth-child(1) {
+  transform: translateY(9.5px) rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) .hamburger-icon span:nth-child(3) {
+  transform: translateY(-9.5px) rotate(-45deg);
+}
+
+/* Remove default border and focus outline from toggler */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* --- End Navbar Styles --- */
+
+
+/* Hero Section */
+.hero-card-body {
+  min-height: auto;
+  /* Default for mobile */
+}
+
+.hero-right-img,
+.hero-2-img,
+.hero-3-img {
+  background-image: url("/img/hero-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-2-img {
+  background-image: url("/img/faces/IMG_1775.jpeg");
+}
+
+.hero-3-img {
+  background-image: url("/img/faces/IMG_1234.jpeg");
+}
+
+/* About Section */
+.section-2-text {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+/* NEW: Big Image border-radius */
+.big-image img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* Gallery Sections (4, 6, 8) */
+#section4 .card,
+#section6 .card,
+#section8 .card {
+  padding: 0;
+  background: transparent;
+}
+
+#section4 .card .card-img-top,
+#section6 .card .card-img-top,
+#section8 .card .card-img-top {
+  height: 440px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+#section4 .card h5,
+#section4 .card p,
+#section6 .card h5,
+#section6 .card p,
+#section8 .card h5,
+#section8 .card p {
+  color: #ffffff;
+}
+
+/* Quality Check Section */
+#section5 .card {
+  background-color: #fff;
+  min-height: auto;
+  /* Default for mobile */
+}
+
+#section5 svg {
+  color: #474344;
+}
+
+#section5 .card .card-title {
+  margin-top: 1rem;
+}
+
+/* Testimonials Section */
+#section7 .card {
+  background-color: #fff;
+  min-height: auto;
+  /* Default for mobile */
+  display: flex;
+  /* Added for better centering */
+  flex-direction: column;
+  justify-content: center;
+}
+
+#section7 .card .card-title {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  /* Adjusted for readability */
+}
+
+#section7 .card img {
+  height: 96px;
+  width: 96px;
+  border-radius: 50%;
+  margin: 0 auto;
+  /* Center image */
+}
+
+/* Contact Form Section */
+#contactForm {
+  color: #fff;
+}
+
+#contactForm .contact-form-image {
+  border-radius: 1rem;
+  height: auto;
+  /* Make height responsive */
+  max-height: 400px;
+  /* Max height on mobile */
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Footer Section */
+#footer h4 {
+  font-size: 1.25rem;
+  /* Better responsive font size */
+}
+
+#footer a:hover {
+  text-decoration: underline !important;
+}
+
+/* --- Responsive Media Queries --- */
+
+/* Medium devices and down (tablets and phones) */
+@media (max-width: 991.98px) {
+
+  /* --- NEW: Center logo on mobile --- */
+  .navbar-brand {
+    /* This tells the logo to take up all available space, 
+      pushing the hamburger menu to the right.
+    */
+    flex-grow: 1;
+
+    /* We set a 'min-width' so the logo image itself doesn't
+      get squished or try to shrink to zero.
+    */
+    min-width: 100px;
+    /* Adjust if logo is wider */
+  }
+
+  .navbar-brand img {
+    /* Finally, we center the image INSIDE the 
+      expanded .navbar-brand area.
+    */
+    margin: 0 auto;
+  }
+
+  .navbar-toggler {
+    /* This ensures the toggler has a higher z-index, 
+      so it stays on top and clickable.
+    */
+    position: relative;
+    z-index: 1;
+  }
+
+  /* --- End of new rules --- */
+
+  /* Center items in collapsed navbar */
+  .navbar-collapse {
+    text-align: center;
+    padding-top: 1rem;
+    /* Add some space */
+  }
+
+  .navbar-nav {
+    justify-content: center;
+    /* Center the social icons row */
+    margin-bottom: 1rem;
+    /* Space between icons and button */
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  .section-2-text {
+    font-size: 1.5rem;
+    /* Smaller text on small phones */
+  }
+
+  #contactForm .contact-form-image {
+    display: none;
+  }
+
+  .para-1 {
+    font-size: 1.25rem;
+    /* Smaller hero text */
+  }
+
+  .display-2 {
+    font-size: 2.5rem;
+    /* Smaller hero heading */
+  }
+
+  .card {
+    padding: 1.5rem;
+    /* Reduce card padding on mobile */
+  }
+}
+
+@media (min-width: 992px) {
+
+  /* Re-apply min-heights only on large screens */
+  .hero-card-body {
+    min-height: 593px;
+  }
+
+  #section5 .card {
+    min-height: 360px;
+  }
+
+  #section7 .card {
+    min-height: 560px;
+  }
+
+  #contactForm .contact-form-image {
+    height: 547px;
+    /* Fixed height on desktop */
+    max-height: none;
+  }
+}
+
+/* Custom Container Width for Desktop */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+    /* Use 1300px instead of Bootstrap's default ~1140px */
+  }
+}

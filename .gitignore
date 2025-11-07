@@ -1,3 +1,6 @@
 /node_modules
 package-lock.json
 style.css.map
+output.css
+output.css.map
+style.scss

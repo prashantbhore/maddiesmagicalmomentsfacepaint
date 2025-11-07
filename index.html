@@ -5,84 +5,622 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
+    <title>Maddies Magical Moments | Professional Face Painting in Bristol, UK</title>
+    <meta name="description"
+        content="Professional face painting for parties, festivals, and corporate events in Bristol, Bath, Norfolk & Suffolk. Book Maddies Magical Moments today!">
+
+    <link rel="icon" href="/img/logo.jpg" type="image/jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Maddies Magical Moments</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="/img/logo.jpg" class="rounded-3" alt="logo" height="100">
+                <img src="/img/logo.jpg" alt="Maddies Magical Moments Logo" class="rounded-3 img-fluid navbar-logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+
+            <div class="collapse navbar-collapse justify-content-lg-end align-items-center" id="navbarNav">
+                <ul class="navbar-nav d-flex align-items-center gap-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link p-0" target="_blank"
+                            href="https://instagram.com/maddiesmagicalmomentsfacepaint"
+                            aria-label="Follow us on Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="32"
+                                height="32" class="text-dark">
+                                <path fill-rule="evenodd"
+                                    d="M12 2c5.5191 0 10 4.48086 10 10 0 5.5191-4.4809 10-10 10-5.51914 0-10-4.4809-10-10C2 6.48086 6.48086 2 12 2Zm0 3.75c-1.6974 0-1.9102.00719-2.57688.03762-.66523.03035-1.11957.13601-1.51714.29051-.41098.15972-.75953.37343-1.107.72089-.34746.34746-.56117.69602-.72089 1.107-.1545.39753-.26012.85187-.29051 1.5171C5.75719 10.0898 5.75 10.3026 5.75 12s.00719 1.9102.03758 2.5769c.03039.6652.13601 1.1195.29051 1.5171.15972.411.37343.7595.72089 1.107.34747.3475.69602.5612 1.107.7209.39757.1545.85191.2601 1.51714.2905.66668.0304.87948.0376 2.57688.0376s1.9102-.0072 2.5769-.0376c.6652-.0304 1.1195-.136 1.5171-.2905.411-.1597.7595-.3734 1.107-.7209.3475-.3475.5612-.696.7209-1.107.1545-.3976.2601-.8519.2905-1.5171.0304-.6667.0376-.8795.0376-2.5769 0-1.6974-.0072-1.9102-.0376-2.57688-.0304-.66523-.136-1.11957-.2905-1.5171-.1597-.41098-.3734-.75954-.7209-1.107s-.696-.56117-1.107-.72089c-.3976-.1545-.8519-.26016-1.5171-.29051C13.9102 5.75719 13.6974 5.75 12 5.75Zm0 1.12613c1.6688 0 1.8665.00637 2.5255.03645.6094.02781.9403.12961 1.1606.21519.2917.11336.4999.24883.7186.46754.2187.21867.3542.42692.4675.71864.0856.22023.1874.55113.2152 1.1605.0301.65905.0365.85675.0365 2.52555s-.0064 1.8665-.0365 2.5255c-.0278.6094-.1296.9403-.2152 1.1606-.1133.2917-.2488.4999-.4675.7186-.2187.2187-.4269.3542-.7186.4675-.2203.0856-.5512.1874-1.1606.2152-.6589.0301-.8566.0365-2.5255.0365s-1.8666-.0064-2.52555-.0365c-.60937-.0278-.94027-.1296-1.1605-.2152-.29176-.1133-.49997-.2488-.71868-.4675-.21871-.2187-.35414-.4269-.4675-.7186-.08558-.2203-.18742-.5512-.21523-1.1606-.03008-.659-.03641-.8567-.03641-2.5255s.00633-1.8665.03641-2.52555c.02781-.60937.12965-.94027.21523-1.1605.11336-.29172.24879-.49997.4675-.71864.21871-.21871.42692-.35418.71868-.46754.22023-.08558.55113-.18738 1.1605-.21519.65905-.03008.85675-.03645 2.52555-.03645Zm0 1.91442c-1.7725 0-3.20945 1.43695-3.20945 3.20945S10.2275 15.2095 12 15.2095s3.2095-1.437 3.2095-3.2095c0-1.7725-1.437-3.20945-3.2095-3.20945Zm0 5.29275c-1.1506 0-2.08332-.9327-2.08332-2.0833 0-1.1506.93272-2.08332 2.08332-2.08332S14.0833 10.8494 14.0833 12 13.1506 14.0833 12 14.0833Zm4.0863-5.41955c0 .41422-.3358.74996-.7501.74996-.4141 0-.7499-.33574-.7499-.74996s.3358-.75.7499-.75c.4143 0 .7501.33578.7501.75Z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link p-0" target="_blank"
+                            href="https://facebook.com/people/Maddies-Magical-Moments-face-painting/100090751270810"
+                            aria-label="Follow us on Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="32"
+                                height="32" class="text-dark">
+                                <path fill-rule="evenodd"
+                                    d="M10.4375 21.8784C5.65941 21.1274 2 16.9877 2 12 2 6.48086 6.48086 2 12 2c5.5191 0 10 4.48086 10 10 0 4.9877-3.6594 9.1274-8.4375 9.8784v-6.9878h2.3301L16.3359 12h-2.7734v-1.8758c0-.79084.3874-1.5617 1.6296-1.5617h1.261V6.10156s-1.1443-.19531-2.2385-.19531c-2.2842 0-3.7771 1.38438-3.7771 3.89063V12H7.89844v2.8906h2.53906v6.9878Z">
+                                </path>
+                            </svg>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link p-0" target="_blank"
+                            href="https://tiktok.com/@maddies.magical.moments?_t=8c2msYQitBK&amp;_r=1"
+                            aria-label="Follow us on TikTok">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="32"
+                                height="32" class="text-dark">
+                                <path
+                                    d="M19.619 2H4.38095C3.0681 2 2 3.0681 2 4.38095V19.619C2 20.9319 3.0681 22 4.38095 22H19.619C20.9319 22 22 20.9319 22 19.619V4.38095C22 3.0681 20.9319 2 19.619 2Zm-1.9019 8.7252c-.1081.01-.2176.0167-.3285.0167-1.2491 0-2.3467-.6424-2.9853-1.61333v5.49383c0 2.2424-1.8181 4.0605-4.0604 4.0605-2.24242 0-4.06052-1.8181-4.06052-4.0605s1.8181-4.0605 4.06052-4.0605c.0847 0 .1676.0076.2509.0129v2.0009c-.0833-.01-.1652-.0252-.2509-.0252-1.1448 0-2.07242.9276-2.07242 2.0724 0 1.1447.92762 2.0723 2.07242 2.0723 1.1447 0 2.1557-.9019 2.1557-2.0466 0-.0453.02-9.3305.02-9.3305h1.9124c.18 1.71 1.5604 3.05952 3.2861 3.18333v2.22377Z">
+                                </path>
+                            </svg>
+                        </a>
                     </li>
                 </ul>
+
+                <div class="mt-3 mt-lg-0 ms-lg-4">
+                    <a href="tel:+447927077955" class="btn btn-outline-dark px-4 py-2 rounded-3 fw-medium">
+                        Get in Touch
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- SECTION 1:  -->
-    <section class="py-5 py-md-6">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card border-0">
+    <section class="py-4 py-md-5">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="card border-0 hero-card-body">
                                 <div class="card-body">
-                                    <h6 class="light-pill">Magical Faces</h4>
-                                        <h1 class="heading-1 display-2 fw-normal">Turn Moments <br>into
-                                            Magical <br> Experiences</h1>
-                                        <p class="card-text para-1">Transform your event with enchanting face painting
-                                            artistry, bringing smiles and magical memories to guests of all ages.</p>
-                                        <a href="#" class="card-link btn btn-main">Book Your Artist</a>
+                                    <h6 class="light-pill">Magical Faces</h6>
+                                    <h1 class="heading-1 display-2 fw-normal">Turn Moments <br>into
+                                        Magical <br> Experiences</h1>
+                                    <p class="card-text para-1">Transform your event with enchanting face painting
+                                        artistry, bringing smiles and magical memories to guests of all ages.</p>
+                                    <a href="#contactForm" class="card-link btn btn-main">Book Your Artist</a>
                                 </div>
                             </div>
-
                         </div>
-                        <div class="col-md-12"></div>
+                        <div class="col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card border-0 p-0 hero-2-img" style="min-height: 280px;">
+                            </div>
+                        </div>
+                        <div class="col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card border-0 p-0 hero-3-img" style="min-height: 280px;">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6"></div>
+
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card border-0 h-100 hero-right-img p-0" style="min-height: 400px;">
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <section class="py-4 py-md-5" style="background: #484445;">
+        <div class="container py-4" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="section-2-text">Uniquely transforming your event into unforgettable experiences, Maddie's
+                        Magical Moments offers
+                        premier face painting service in Bristol and surrounding areas. With buckets of experience from
+                        Glastonbury festival, zoos, pumpkin patches and football fan zones; we are committed to
+                        creativity and excellence tailored to your event. Our skilled artists, professional indoor or
+                        outdoor set up ensure every occasion is bursting with colour and joy making it just as memorable
+                        as it is magical! Elevate your event with Maddie's artistic touch. </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="py-4 py-md-5 big-image">
+        <div class="container py-4" data-aos="zoom-in">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img src="/img/single-main-image.jpg" alt="A collage of various face painting designs"
+                        style="width: 100%;" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <section class="py-4 py-md-5" id="section4" style="background: #484445;">
+        <div class="container py-4">
+            <div class="d-flex flex-column align-items-center text-white text-center" data-aos="fade-up">
+                <h6 class="light-pill-pink">Vibrant Transformations</h6>
+                <h1 class="text-light">Enhance Your Event with Face Art</h1>
+                <p>Make your event or special occasions into unforgettable experiences with our professional face
+                    painting
+                    services, bringing vibrant artistry to life.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0">
+                        <img src="img/faces/IMG_5119.jpeg" class="card-img-top" alt="Child with colorful face paint"
+                            loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Whimsical Children's Parties</h5>
+                            <p class="card-text">Transform your child's party into a magical wonderland with our
+                                creative face painting designs..</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0">
+                        <img src="img/faces/IMG_6375.jpeg" class="card-img-top"
+                            alt="Adult with face paint at a corporate event" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Corporate Event Fun Faces</h5>
+                            <p class="card-text">Add a splash of color and fun to your corporate event with our
+                                professional face painting services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0">
+                        <img src="img/festivals/IMG_8374.jpeg" class="card-img-top"
+                            alt="Woman with glittery festival face art" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Festival Face Art</h5>
+                            <p class="card-text">Invite us to your local festival or music event to stand out! Our
+                                artistic face painting will create magic for all ages.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0">
+                        <img src="img/faces/IMG_9097.jpeg" class="card-img-top" alt="Face painting at a fete"
+                            loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Fetes and Fun Days</h5>
+                            <p class="card-text">Make birthdays unforgettable with themed face paintings that match your
+                                party's unique style.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0">
+                        <img src="img/section4-2.jpeg" class="card-img-top"
+                            alt="Close-up of a detailed face paint design" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Personalized Face Art</h5>
+                            <p class="card-text">With over 2 years of professional experience, and 10 years voluntary
+                                painting experience, we effortlessly bring smiles and crowds of colour to your event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0">
+                        <img src="img/IMG_7572.jpeg" class="card-img-top"
+                            alt="Maddie's professional face painting setup" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Professional Set Up</h5>
+                            <p class="card-text">Our eye catching, professional indoor and outdoor set up will bring the
+                                WOW factor to your birthday party, festival, organisation or event!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4 py-md-5" id="section5" style="background: #F5F5F5;">
+        <div class="container py-4">
+            <div class="d-flex flex-column align-items-center text-center" data-aos="fade-up">
+                <h6 class="light-pill">Artistry Unleashed</h6>
+                <h1>Creative Face Artistry for Events</h1>
+                <p>Make your event or special occasions into unforgettable experiences with our professional face
+                    painting
+                    services, bringing vibrant artistry to life.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0">
+                        <div class="card-body text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64"
+                                fill="currentColor">
+                                <path
+                                    d="M12 1L20.2169 2.82598C20.6745 2.92766 21 3.33347 21 3.80217V13.7889C21 15.795 19.9974 17.6684 18.3282 18.7812L12 23L5.6718 18.7812C4.00261 17.6684 3 15.795 3 13.7889V3.80217C3 3.33347 3.32553 2.92766 3.78307 2.82598L12 1ZM16.4524 8.22183L11.5019 13.1709L8.67421 10.3431L7.25999 11.7574L11.5026 16L17.8666 9.63604L16.4524 8.22183Z">
+                                </path>
+                            </svg>
+                            <h5 class="card-title">DBS checked</h5>
+                            <p class="card-text">This means you can have complete peace of mind when booking me for your
+                                event, knowing that I provide a safe, friendly, and professional experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0">
+                        <div class="card-body text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64"
+                                fill="currentColor">
+                                <path
+                                    d="M3.78307 2.82598L12 1L20.2169 2.82598C20.6745 2.92766 21 3.33347 21 3.80217V13.7889C21 15.795 19.9974 17.6684 18.3282 18.7812L12 23L5.6718 18.7812C4.00261 17.6684 3 15.795 3 13.7889V3.80217C3 3.33347 3.32553 2.92766 3.78307 2.82598ZM11 10H8V12H11V15H13V12H16V10H13V7H11V10Z">
+                                </path>
+                            </svg>
+                            <h5 class="card-title">Public Liability Insurance</h5>
+                            <p class="card-text">This provides an extra layer of security, ensuring a stress-free, fun,
+                                and magical experience for everyone involved. Book with confidence today! </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0">
+                        <div class="card-body text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64"
+                                fill="currentColor">
+                                <path
+                                    d="M4.7134 7.12811L4.46682 7.69379C4.28637 8.10792 3.71357 8.10792 3.53312 7.69379L3.28656 7.12811C2.84706 6.11947 2.05545 5.31641 1.06767 4.87708L0.308047 4.53922C-0.102682 4.35653 -0.102682 3.75881 0.308047 3.57612L1.0252 3.25714C2.03838 2.80651 2.84417 1.97373 3.27612 0.930828L3.52932 0.319534C3.70578 -0.106511 4.29417 -0.106511 4.47063 0.319534L4.72382 0.930828C5.15577 1.97373 5.96158 2.80651 6.9748 3.25714L7.69188 3.57612C8.10271 3.75881 8.10271 4.35653 7.69188 4.53922L6.93228 4.87708C5.94451 5.31641 5.15288 6.11947 4.7134 7.12811ZM18.2278 2.3713L13.2886 6.21289C9.34224 5.23923 5.55843 7.54646 4.5 11.4966C4.39826 11.8763 4.36647 12.262 4.33317 12.666C4.21829 14.0599 4.08554 15.6707 1 17.9966C3.5 19.4966 8 20.9984 11.5016 20.9984C14.8142 20.9984 17.8463 18.7896 18.7444 15.4377C19.0836 14.1719 19.0778 12.895 18.7847 11.7067L22.6253 6.76879C22.9349 6.3707 22.8997 5.80435 22.543 5.44774L19.5488 2.45355C19.1922 2.09694 18.6259 2.06168 18.2278 2.3713ZM16.8952 8.2852C16.8319 8.21952 16.7673 8.15494 16.7015 8.09149L15.5769 6.96685L18.7589 4.49198L20.5046 6.23774L18.0297 9.41972L16.8952 8.2852Z">
+                                </path>
+                            </svg>
+                            <h5 class="card-title">High quality products</h5>
+                            <p class="card-text">All face paints, glitter and SFX materials are of the highest quality
+                                and hypoallergenic. These are non-toxic and easy to remove making them perfect for
+                                children and adults alike.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4 py-md-5" id="section6" style="background: #484445;">
+        <div class="container py-4">
+            <div class="d-flex flex-column align-items-center text-white text-center" data-aos="fade-up">
+                <h6 class="light-pill-pink">Colorful Creations</h6>
+                <h1 class="text-light">Vibrant Face Art</h1>
+                <p>Experience the magic of Maddie and her professional face painting artistry. Just perfect for making
+                    every event around Bristol, Bath, Cardiff, Norfolk and Suffolk unforgettable!
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0">
+                        <img src="img/faces/IMG_6535.jpeg" class="card-img-top" alt="Face painting example 2"
+                            loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0">
+                        <img src="img/faces/IMG_2913.jpeg" class="card-img-top" alt="Face painting example 3"
+                            loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0">
+                        <img src="img/faces/IMG_5818.jpeg" class="card-img-top" alt="Face painting example 4"
+                            loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0">
+                        <img src="img/faces/IMG_6873.jpeg" class="card-img-top" alt="Face painting example 5"
+                            loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0">
+                        <img src="img/faces/IMG_8170.jpeg" class="card-img-top" alt="Face painting example 6"
+                            loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0">
+                        <img src="img/faces/IMG_8863.jpeg" class="card-img-top" alt="Face painting example 7"
+                            loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4 py-md-5" id="section7" style="background: #F5F5F5;">
+        <div class="container py-4">
+            <div class="d-flex flex-column align-items-center text-center" data-aos="fade-up">
+                <h6 class="light-pill">Client Experiences</h6>
+                <h1>Bristol's Top Face Painting Reviews</h1>
+                <p>Maddie's Magical Moments transformed our event with stunning face paintings. Professional and
+                    creative service that delighted guests of all ages.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0">
+                        <div class="card-body text-center">
+                            <img src="img/reviews/rev-1.webp" alt="Review from Shirehampton Markets" loading="lazy">
+                            <p class="card-title">What a bubbly personality Maddie has. We have loved having Maddie’s
+                                Magical Moments face-painting at our Autumnal Christmas Fayre just gone. Creative,
+                                talented, personable and much more besides. We are booking Maddie for our future events
+                                and definitely recommend her to others. Thank you so much Maddie.</p>
+                            <p class="card-text">- Shirehampton Markets.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0">
+                        <div class="card-body text-center">
+                            <img src="img/reviews/rev-2.webp" alt="Review from Steph Robinson" loading="lazy">
+                            <p class="card-title">What a lovely, kind heart-hearted lady Maddie is. Maddie’s talent in
+                                face painting in absolutely awesome, she was funny, puts the children at ease and has a
+                                laugh with them as she face paints. Thank you for making Darcie-Grace & Ozzie happy
+                                little people.</p>
+                            <p class="card-text">- Steph Robinson</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0">
+                        <div class="card-body text-center">
+                            <img src="img/reviews/rev-3.webp" alt="Review from Cara Paige" loading="lazy">
+                            <p class="card-title">Maddie attended a Christmas event at my place of work in early
+                                December. She was absolutely fantastic!! Very professional, friendly and helpful.
+                                Everybody raved about how great she was, and the beautiful designs she created! Thank
+                                you Maddie!</p>
+                            <p class="card-text">- Cara Paige</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4 py-md-5 d-none d-lg-block" id="section8" style="background: #484445;">
+        <div class="container py-4">
+            <div class="d-flex flex-column align-items-center text-white text-center" data-aos="fade-up">
+                <h6 class="light-pill-pink">Artful Transformations</h6>
+                <h1 class="text-light mb-3">Vibrant Faces, Lasting Smiles</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0">
+                        <img src="img/faces/IMG_2947.jpeg" class="card-img-top" alt="Face painting example 8"
+                            loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0">
+                        <img src="img/faces/IMG_7077.jpeg" class="card-img-top" alt="Face painting example 9"
+                            loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0">
+                        <img src="img/faces/IMG_2972.jpeg" class="card-img-top" alt="Face painting example 10"
+                            loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0">
+                        <img src="img/faces/121.jpeg" class="card-img-top" alt="Face painting example 11"
+                            loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0">
+                        <img src="img/festivals/IMG_8435.jpeg" class="card-img-top" alt="Face painting example 12"
+                            loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0">
+                        <img src="img/faces/IMG_6684.jpeg" class="card-img-top" alt="Face painting example 13"
+                            loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4 py-md-5" id="section9" style="background: #F5F5F5;">
+        <div class="container py-4 text-center" data-aos="fade-up">
+            <h1>Transform Your Event Today</h1>
+            <p>Captivate your guests with stunning face painting artistry at your next occasion in Bristol. Book
+                Maddies
+                Magical Moments for a truly unforgettable experience.</p>
+            <a href="#contactForm" class="card-link btn btn-main">Book Your Artist</a>
+        </div>
+    </section>
+
+    <section class="py-4 py-md-5" id="contactForm" style="background: #484445;">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="text-light">Contact Us</h2>
+                    <p>Looking to book a face painting session? Have questions? Reach out to me here and i'll respond
+                        promptly.</p>
+
+                    <form action="https://formspree.io/f/xanlrazp" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="phonenumber" class="form-label">Phone</label>
+                                <input type="tel" name="number" id="phonenumber" class="form-control">
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" name="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea name="message" id="message" class="form-control" rows="5" required></textarea>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <button type="submit" class="btn btn-light w-25 fw-bolder">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="">
+                        <img src="/img/contact-form-image.jpg" alt="A child with a beautiful tiger face paint design"
+                            class="contact-form-image" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 py-md-5" id="footer" style="background: #000;">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="df-center text-white">
+                        <div class="mb-3">
+                            <img src="img/logo.jpg" alt="Maddies Magical Moments Logo" height="125px"
+                                style="border-radius: 0.25rem;">
+                        </div>
+                        <ul class="list-unstyled text-center">
+                            <li class="mb-2">📍 Bristol, Bath, Norfolk & Suffolk</li>
+                            <li class="mb-2">
+                                <a href="tel:+447927077955" class="text-white text-decoration-none">
+                                    📞 +44 7927 077955
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="mailto:maddiesmagicalmomentsfacepaint@gmail.com"
+                                    class="text-white text-decoration-none">
+                                    📧 maddiesmagicalmomentsfacepaint@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="py-4">
+        <div class="container">
+            <ul class="d-flex align-items-center gap-3 justify-content-center list-unstyled p-0 m-0">
+                <li><a target="_blank" href="https://instagram.com/maddiesmagicalmomentsfacepaint"
+                        aria-label="Follow us on Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="36"
+                            height="36" style="color: rgb(17, 24, 39);">
+                            <path fill-rule="evenodd"
+                                d="M12 2c5.5191 0 10 4.48086 10 10 0 5.5191-4.4809 10-10 10-5.51914 0-10-4.4809-10-10C2 6.48086 6.48086 2 12 2Zm0 3.75c-1.6974 0-1.9102.00719-2.57688.03762-.66523.03035-1.11957.13601-1.51714.29051-.41098.15972-.75953.37343-1.107.72089-.34746.34746-.56117.69602-.72089 1.107-.1545.39753-.26012.85187-.29051 1.5171C5.75719 10.0898 5.75 10.3026 5.75 12s.00719 1.9102.03758 2.5769c.03039.6652.13601 1.1195.29051 1.5171.15972.411.37343.7595.72089 1.107.34747.3475.69602.5612 1.107.7209.39757.1545.85191.2601 1.51714.2905.66668.0304.87948.0376 2.57688.0376s1.9102-.0072 2.5769-.0376c.6652-.0304 1.1195-.136 1.5171-.2905.411-.1597.7595-.3734 1.107-.7209.3475-.3475.5612-.696.7209-1.107.1545-.3976.2601-.8519.2905-1.5171.0304-.6667.0376-.8795.0376-2.5769 0-1.6974-.0072-1.9102-.0376-2.57688-.0304-.66523-.136-1.11957-.2905-1.5171-.1597-.41098-.3734-.75954-.7209-1.107s-.696-.56117-1.107-.72089c-.3976-.1545-.8519-.26016-1.5171-.29051C13.9102 5.75719 13.6974 5.75 12 5.75Zm0 1.12613c1.6688 0 1.8665.00637 2.5255.03645.6094.02781.9403.12961 1.1606.21519.2917.11336.4999.24883.7186.46754.2187.21867.3542.42692.4675.71864.0856.22023.1874.55113.2152 1.1605.0301.65905.0365.85675.0365 2.52555s-.0064 1.8665-.0365 2.5255c-.0278.6094-.1296.9403-.2152 1.1606-.1133.2917-.2488.4999-.4675.7186-.2187.2187-.4269.3542-.7186.4675-.2203.0856-.5512.1874-1.1606.2152-.6589.0301-.8566.0365-2.5255.0365s-1.8666-.0064-2.52555-.0365c-.60937-.0278-.94027-.1296-1.1605-.2152-.29176-.1133-.49997-.2488-.71868-.4675-.21871-.2187-.35414-.4269-.4675-.7186-.08558-.2203-.18742-.5512-.21523-1.1606-.03008-.659-.03641-.8567-.03641-2.5255s.00633-1.8665.03641-2.52555c.02781-.60937.12965-.94027.21523-1.1605.11336-.29172.24879-.49997.4675-.71864.21871-.21871.42692-.35418.71868-.46754.22023-.08558.55113-.18738 1.1605-.21519.65905-.03008.85675-.03645 2.52555-.03645Zm0 1.91442c-1.7725 0-3.20945 1.43695-3.20945 3.20945S10.2275 15.2095 12 15.2095s3.2095-1.437 3.2095-3.2095c0-1.7725-1.437-3.20945-3.2095-3.20945Zm0 5.29275c-1.1506 0-2.08332-.9327-2.08332-2.0833 0-1.1506.93272-2.08332 2.08332-2.08332S14.0833 10.8494 14.0833 12 13.1506 14.0833 12 14.0833Zm4.0863-5.41955c0 .41422-.3358.74996-.7501.74996-.4141 0-.7499-.33574-.7499-.74996s.3358-.75.7499-.75c.4143 0 .7501.33578.7501.75Z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a></li>
+                <li><a target="_blank"
+                        href="https://facebook.com/people/Maddies-Magical-Moments-face-painting/100090751270810"
+                        aria-label="Follow us on Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="36"
+                            height="36" style="color: rgb(17, 24, 39);">
+                            <path fill-rule="evenodd"
+                                d="M10.4375 21.8784C5.65941 21.1274 2 16.9877 2 12 2 6.48086 6.48086 2 12 2c5.5191 0 10 4.48086 10 10 0 4.9877-3.6594 9.1274-8.4375 9.8784v-6.9878h2.3301L16.3359 12h-2.7734v-1.8758c0-.79084.3874-1.5617 1.6296-1.5617h1.261V6.10156s-1.1443-.19531-2.2385-.19531c-2.2842 0-3.7771 1.38438-3.7771 3.89063V12H7.89844v2.8906h2.53906v6.9878Z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a></li>
+                <li><a target="_blank" href="https://tiktok.com/@maddies.magical.moments?_t=8c2msYQitBK&amp;_r=1"
+                        aria-label="Follow us on TikTok">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="36"
+                            height="36" style="color: rgb(17, 24, 39);">
+                            <path
+                                d="M19.619 2H4.38095C3.0681 2 2 3.0681 2 4.38095V19.619C2 20.9319 3.0681 22 4.38095 22H19.619C20.9319 22 22 20.9319 22 19.619V4.38095C22 3.0681 20.9319 2 19.619 2Zm-1.9019 8.7252c-.1081.01-.2176.0167-.3285.0167-1.2491 0-2.3467-.6424-2.9853-1.61333v5.49383c0 2.2424-1.8181 4.0605-4.0604 4.0605-2.24242 0-4.06052-1.8181-4.06052-4.0605s1.8181-4.0605 4.06052-4.0605c.0847 0 .1676.0076.2509.0129v2.0009c-.0833-.01-.1652-.0252-.2509-.0252-1.1448 0-2.07242.9276-2.07242 2.0724 0 1.1447.92762 2.0723 2.07242 2.0723 1.1447 0 2.1557-.9019 2.1557-2.0466 0-.0453.02-9.3305.02-9.3305h1.9124c.18 1.71 1.5604 3.05952 3.2861 3.18333v2.22377Z">
+                            </path>
+                        </svg>
+                    </a></li>
+            </ul>
+        </div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // --- Auto-Hide Navbar on Scroll ---
+        let lastScrollTop = 0;
+        let menuIsOpen = false; // NEW: Track menu state
+        const navbar = document.querySelector('.navbar');
+        const navbarHeight = navbar.offsetHeight;
+        const navCollapse = document.getElementById('navbarNav'); // NEW: Get the collapsible menu
+
+        // NEW: Add event listeners to track when the menu is opened or closed
+        navCollapse.addEventListener('show.bs.collapse', function () {
+            menuIsOpen = true;
+        });
+        navCollapse.addEventListener('hidden.bs.collapse', function () {
+            menuIsOpen = false;
+        });
+
+        window.addEventListener('scroll', function () {
+            // NEW: Only run the scroll logic if the mobile menu is NOT open
+            if (!menuIsOpen) {
+                let currentScrollTop = window.scrollY;
+
+                if (currentScrollTop > lastScrollTop) {
+                    // --- Scrolling Down ---
+                    if (currentScrollTop > navbarHeight) {
+                        navbar.classList.add('navbar-hidden');
+                    }
+                } else {
+                    // --- Scrolling Up ---
+                    navbar.classList.remove('navbar-hidden');
+
+                    if (currentScrollTop > 50) {
+                        navbar.classList.add('navbar-scrolled');
+                    } else {
+                        navbar.classList.remove('navbar-scrolled');
+                    }
+                }
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+            }
+        });
+
+        // AOS (Animate on Scroll) Init
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+    </script>
+</body>
+
+</html>
+
 </body>
 
 </html>
