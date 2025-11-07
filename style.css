@@ -398,9 +398,28 @@ h6,
 }
 
 /* Custom Container Width for Desktop */
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .container {
     max-width: 1300px;
-    /* Use 1300px instead of Bootstrap's default ~1140px */
   }
+} */
+.form-control {
+  border-radius: 0.5rem;
+  border: none;
+  padding: .475rem .75rem;
+}
+
+.form-control:focus {
+  border-color: #a8638b;
+  box-shadow: 0 0 0 .25rem rgb(145 100 114);
+}
+
+.submit-btn {
+  border-radius: 0.5rem;
+  padding: .475rem .75rem;
+  border: none;
+}
+
+.btn-check:focus+.btn-light, .btn-light:focus {
+  box-shadow: none;
 }
