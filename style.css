@@ -10,7 +10,8 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  /* font-family: 'Nunito', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1,
@@ -26,7 +27,8 @@ h6,
 
 /* Base Styles */
 .card {
-  padding: 3rem;
+  padding: 1.5rem;
+  /* Use this as the default */
   border-radius: 1rem;
   background-color: rgba(72, 68, 69, 0.1);
 }
@@ -195,7 +197,7 @@ h6,
 
 /* About Section */
 .section-2-text {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: rgb(255, 255, 255);
   text-align: center;
 }
@@ -203,7 +205,7 @@ h6,
 /* NEW: Big Image border-radius */
 .big-image img {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 1rem;
 }
 
 /* Gallery Sections (4, 6, 8) */
@@ -217,9 +219,12 @@ h6,
 #section4 .card .card-img-top,
 #section6 .card .card-img-top,
 #section8 .card .card-img-top {
-  height: 440px;
+  aspect-ratio: 3 / 4;
+  /* NEW: Forces a 3:4 portrait shape */
   object-fit: cover;
   border-radius: 1rem;
+  width: 100%;
+  /* Ensure it fills the card width */
 }
 
 #section4 .card h5,
@@ -233,7 +238,9 @@ h6,
 
 /* Quality Check Section */
 #section5 .card {
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: rgba(72, 68, 69, 0.1);
+
   min-height: auto;
   /* Default for mobile */
 }
@@ -248,7 +255,7 @@ h6,
 
 /* Testimonials Section */
 #section7 .card {
-  background-color: #fff;
+  background-color: rgba(72, 68, 69, 0.1);
   min-height: auto;
   /* Default for mobile */
   display: flex;
@@ -359,9 +366,8 @@ h6,
     display: none;
   }
 
-  .para-1 {
-    font-size: 1.25rem;
-    /* Smaller hero text */
+  .big-image img {
+    border-radius: 0;
   }
 
   .display-2 {
@@ -378,16 +384,17 @@ h6,
 @media (min-width: 992px) {
 
   /* Re-apply min-heights only on large screens */
-  .hero-card-body {
+  /* .hero-card-body {
     min-height: 593px;
-  }
+  } */
 
   #section5 .card {
     min-height: 360px;
   }
 
   #section7 .card {
-    min-height: 560px;
+    /* min-height: 560px; */
+    min-height: 460px;
   }
 
   #contactForm .contact-form-image {
@@ -420,7 +427,8 @@ h6,
   border: none;
 }
 
-.btn-check:focus+.btn-light, .btn-light:focus {
+.btn-check:focus+.btn-light,
+.btn-light:focus {
   box-shadow: none;
 }
 
@@ -429,14 +437,19 @@ h6,
   position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 25px; /* Spacing from the bottom */
-  right: 25px; /* Spacing from the right */
-  background-color: #25d366; /* WhatsApp Green */
+  bottom: 25px;
+  /* Spacing from the bottom */
+  right: 25px;
+  /* Spacing from the right */
+  background-color: #25d366;
+  /* WhatsApp Green */
   color: #fff;
-  border-radius: 50px; /* Makes it a circle */
+  border-radius: 50px;
+  /* Makes it a circle */
   text-align: center;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
-  z-index: 1000; /* Ensures it is always on top of other content */
+  z-index: 1000;
+  /* Ensures it is always on top of other content */
 
   /* Center the SVG icon inside the circle */
   display: flex;
@@ -447,8 +460,9 @@ h6,
 }
 
 .whatsapp-float:hover {
-  color: #fff; 
-  transform: scale(1.1); /* Slight zoom effect on hover */
+  color: #fff;
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
 }
 
 /* Make it slightly smaller on small mobile devices */
@@ -460,4 +474,58 @@ h6,
     right: 15px;
     padding: 8px;
   }
+
+
+}
+
+/* --- HIDE ON MOBILE (New Rule) --- */
+@media (max-width: 575.98px) {
+  .to-top-float {
+    display: none !important;
+    /* Forces the button to be completely hidden on mobile */
+  }
+
+  .navbar-light .navbar-brand {
+    text-align: center;
+    padding-left: 4rem;
+  }
+}
+
+/* --- Go To Top Button (New) --- */
+.to-top-float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  /* Positioned 10px above the 60px WhatsApp button (25+60+10 = 95) */
+  bottom: 95px;
+  right: 25px;
+  background-color: rgba(71, 67, 68, 0.85);
+  /* Site dark color with transparency */
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  /* Hidden by default */
+  visibility: hidden;
+  /* Hidden by default */
+  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.to-top-float:hover {
+  background-color: #f7afc5;
+  /* Site pink color on hover */
+  color: #474344;
+  /* Dark arrow on hover */
+}
+
+/* Class added by JavaScript when scrolling */
+.to-top-float.show {
+  opacity: 1;
+  visibility: visible;
 }
